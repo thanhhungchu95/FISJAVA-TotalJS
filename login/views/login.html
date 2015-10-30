@@ -1,0 +1,41 @@
+@{title('Login Form')}
+
+<div> 
+<center>
+
+    <form>
+        
+        <div> 
+            Username: 
+            @{text('', {placeholder: 'Type username', id: 'username'})} </div>
+        
+        <br />
+        
+        <div> 
+            Password: 
+            @{password('', {placeholder: 'Type password', id: 'password'})} </div>
+
+        <br />
+
+        <div> 
+            <input type="button" value="Login" onClick="auth()" /> 
+            <input type="reset" value="Reset" />
+        </div>
+
+    </form>
+
+    <script type="text/javascript">
+        function auth() {
+            var name = document.getElementById('username');
+            var pass = document.getElementById('password');
+
+            if (name.value == "admin" && pass.value == "123456") {
+                document.writeln('Hello World!');
+                document.close();
+                document.title = "Welcome";
+            }
+        }
+    </script>
+
+</center> 
+</div>
